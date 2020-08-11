@@ -20,6 +20,10 @@ resource "azurerm_hdinsight_kafka_cluster" "kafkacluster" {
   cluster_version           = "4.0"
   tier                      = "Standard"
 
+  tags = {
+    Environment = "dev"
+  }
+
   component_version {
     kafka = "2.1"
   }
